@@ -234,6 +234,7 @@ static void pinnacle_report_data(const struct device *dev) {
     uint8_t packet[3];
     int ret;
     ret = pinnacle_seq_read(dev, PINNACLE_STATUS1, packet, 1);
+    LOG_DBG("babo");
     if (ret < 0) {
         LOG_ERR("read status: %d", ret);
         return;
